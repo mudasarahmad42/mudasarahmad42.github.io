@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { ThemeService } from '../core/services/theme-service/theme.service';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent {
+  isDarkMode = false;
+  constructor(public themeService: ThemeService) {
+    // Get the initial theme state
+    this.themeService.isDarkMode$.subscribe(state => {
+      this.isDarkMode = state;
+    });
+  }
+}

@@ -1,0 +1,174 @@
+.technologies-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.technologies-sub-heading-description {
+  padding: 20px;
+  margin: 20px;
+  font-weight: 500;
+  color: #4a5568;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.technologies-sub-heading-description-dark-mode {
+  color: #fff;
+}
+
+.technologies-heading {
+  text-transform: uppercase;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.technologies-content {
+  border: 2px solid black;
+  line-height: 35px;
+  min-width: 1293px;
+  min-height: 220px;
+}
+
+.technologies-content-dark-mode {
+  border: 2px solid #fff;
+  line-height: 35px;
+  min-width: 1293px;
+  min-height: 220px;
+}
+
+.technologies-sub-heading {
+  font-weight: 600;
+  text-transform: uppercase
+}
+
+.technologies-sub-heading-container {
+  padding: 10px 48px;
+  border-bottom: 2px solid black;
+}
+
+.technologies-sub-heading-container-dark-mode {
+  padding: 10px 48px;
+  border-bottom: 2px solid #fff;
+}
+
+/*Grid*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 60px;
+  padding: 40px 0;
+}
+
+.grid-container>div {
+  text-align: center;
+  min-height: 150px;
+  max-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  height: 150px;
+  border-radius: 20px;
+}
+
+.js-icon,
+.html-icon,
+.css-icon,
+.typescript-icon,
+.bootstrap-icon,
+.jquery-icon,
+.angular-icon,
+.react-icon,
+.csharp-icon,
+.dotnet-icon,
+.sql-server-icon,
+.elastic-search-icon,
+.identity-server-icon,
+.active-directory-icon {
+  filter: drop-shadow(8px 6px lightgray);
+  transition: 0.2s all ease
+}
+
+.icon-dark-mode {
+  filter: drop-shadow(8px 6px #fff);
+  transition: 0.2s all ease
+}
+
+.js-icon:hover {
+  filter: drop-shadow(8px 6px #fff199);
+}
+
+.html-icon:hover {
+  filter: drop-shadow(8px 6px #feb39a);
+}
+
+.css-icon:hover {
+  filter: drop-shadow(8px 6px #9ed1fa);
+}
+
+.typescript-icon:hover {
+  filter: drop-shadow(8px 6px #99d6ff);
+}
+
+.bootstrap-icon:hover {
+  filter: drop-shadow(8px 6px #cdb9df);
+}
+
+.jquery-icon:hover {
+  filter: drop-shadow(8px 6px #9dd4fb);
+}
+
+.angular-icon:hover {
+  filter: drop-shadow(8px 6px #ff99af);
+}
+
+.react-icon:hover {
+  filter: drop-shadow(8px 6px #99f0ff);
+}
+
+.csharp-icon:hover {
+  filter: drop-shadow(8px 6px #e8b0e1);
+}
+
+.dotnet-icon:hover {
+  filter: drop-shadow(8px 6px #cbb7e1);
+}
+
+.sql-server-icon:hover {
+  filter: drop-shadow(8px 6px #F3D5D3);
+}
+
+.elastic-search-icon:hover {
+  filter: drop-shadow(8px 6px #e1f9f8);
+}
+
+.identity-server-icon:hover {
+  filter: drop-shadow(8px 6px darkgrey);
+}
+
+.active-directory-icon:hover {
+  filter: drop-shadow(8px 6px #c7f3ff);
+}
+
+@media screen and (max-width: 1000px) {
+  .technologies-content {
+    min-width: unset;
+    min-height: unset;
+    width: 94vw;
+  }
+
+  .grid-container {
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    padding: 20px 0;
+  }
+
+  .icon {
+    height: 100px;
+  }
+}

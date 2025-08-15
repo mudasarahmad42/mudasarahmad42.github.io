@@ -1,0 +1,93 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+  a.navbar-brand:hover {
+    color: #4279af;
+  }
+
+html {
+  font-size: 14px;
+}
+
+.toggle-theme-button {
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  right: 44px;
+}
+
+.light-mode-icon,
+.dark-mode-icon {
+}
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.nav-link-blogs-button {
+  padding: 7.5px 50px;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 78px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.1s all ease;
+}
+
+  .nav-link-blogs-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+.nav-dark-mode {
+  background-color: #121212 !important;
+  color: white !important;
+  transition: background-color ease 0.5s;
+}
+
+.nav-icon-dark-mode {
+  color: white !important;
+  transition: background-color ease 0.5s;
+}
+
+.button-dark-mode {
+  background-color: white !important;
+  color: #121212 !important;
+  transition: background-color ease 0.5s;
+}
+
+  .button-dark-mode:hover {
+    box-shadow: rgba(255,255,255, 0.35) 0px 5px 15px;
+  }
+
+@media screen and (max-width: 1000px) {
+  .isMobile {
+    margin-top: 20px
+  }
+
+  .navbar-toggler {
+    border-bottom: 5px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 2px solid black;
+  }
+
+  .toggle-theme-button {
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    right: 0%;
+    padding: 20px;
+  }
+}

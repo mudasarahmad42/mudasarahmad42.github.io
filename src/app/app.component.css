@@ -1,0 +1,5 @@
+.body-dark-mode {
+  background-color: #121212 !important;
+  color: white !important;
+  transition: background-color ease 0.5s;
+}

@@ -1,0 +1,85 @@
+.shadow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: radial-gradient(circle at center, transparent, rgba(0,0,0,0.97) 12%);
+  pointer-events: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: end;
+  margin: 10% 35px 0 0;
+}
+
+.content-text{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.explore-button {
+  font-size: 12px;
+  text-decoration: none;
+  color: #44484b;
+  padding: 5px;
+  border: 1px solid #44484b;
+  border-radius: 3px;
+  width: 120px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s all ease;
+}
+
+  .explore-button:hover {
+    color: #fff;
+    background-color: #44484b;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+.lantern-container {
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+  .lantern-container:hover {
+    opacity: 1;
+  }
+
+.lantern:hover {
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  transition: 0.3s all ease-in-out;
+}
+
+.riddle-container {
+  font-size: 12px;
+  position: absolute;
+  bottom: 12%;
+  left: 16%;
+}
+
+/*Animation*/
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+

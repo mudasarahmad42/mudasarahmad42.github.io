@@ -1,0 +1,32 @@
+.projects-main-container {
+  margin: 25px 0;
+}
+
+.projects-heading {
+  text-transform: uppercase;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.projects-content {
+  border: 2px solid black;
+  padding: 40px 88px;
+  line-height: 35px;
+  height: 220px;
+  width: 1293px;
+}
+
+.projects-content-dark-mode {
+  border: 2px solid #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .projects-content {
+    height: unset;
+    width: 94vw;
+  }
+
+  .projects-heading {
+    width: 94vw;
+  }
+}

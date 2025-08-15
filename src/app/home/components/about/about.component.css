@@ -1,0 +1,38 @@
+.about-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.about-heading {
+  text-transform: uppercase;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.about-content {
+  border: 2px solid black;
+  padding: 40px 88px;
+  line-height: 35px;
+}
+
+.about-content-dark-mode {
+  border: 2px solid #fff;
+  padding: 40px 88px;
+  line-height: 35px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .about-main-container {
+    width: 94vw;
+  }
+
+  .about-content {
+    padding: 20px 18px;
+    line-height: 25px;
+  }
+}

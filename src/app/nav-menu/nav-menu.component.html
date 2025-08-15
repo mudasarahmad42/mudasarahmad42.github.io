@@ -1,0 +1,12 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3" [ngClass]="{'nav-dark-mode': isDarkMode}">
+    <div class="container">
+      <a class="navbar-brand" [ngClass]="{'nav-icon-dark-mode': isDarkMode}" [routerLink]="['/']">&lt;Mudasar Ahmad&#47;&gt;</a>
+    </div>
+
+    <div class="toggle-theme-button" (click)="toggleTheme()">
+      <i-feather *ngIf="isDarkMode" name="sun" class="light-mode-icon"></i-feather>
+      <i-feather *ngIf="!isDarkMode" name="moon" class="dark-mode-icon"></i-feather>
+    </div>
+  </nav>
+</header>

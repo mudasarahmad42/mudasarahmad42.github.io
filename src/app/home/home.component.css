@@ -1,0 +1,230 @@
+.main-content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+
+.main-content-name {
+  font-size: 48px;
+}
+
+
+.image-content {
+  width: min(350px, 90vw);
+  height: min(350px, 90vw);
+  background-color: #DDDDDD;
+  border-radius: 50%;
+  border-bottom: 7px solid #5a9adc;
+  overflow: hidden;
+  transition: all ease 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.image-content:hover {
+  background-color: #eaf2fb;
+}
+
+.image-content-dark-mode {
+  background-color: #fff !important;
+  border-bottom: 7px solid darkgray !important;
+}
+
+.image-content .main-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Hover effect specific styles */
+.image-content .default-image {
+  opacity: 1;
+}
+
+.image-content .hover-image {
+  opacity: 0;
+}
+
+.image-content:hover .default-image {
+  opacity: 0;
+}
+
+.image-content:hover .hover-image {
+  opacity: 1;
+}
+
+.main-content-1,
+.main-content-2 {
+  font-size: 20px;
+  padding: 1px 4px;
+}
+
+.cv-button {
+  width: 400px;
+  padding: 7px 20px;
+  border-radius: 30px;
+  border-bottom: 3px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: 5px 0;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  background: linear-gradient(white, white 50%, black 50%, black);
+  background-size: 100% 200%;
+  transition: background 0.5s;
+  cursor: pointer
+}
+
+.cv-button-dark-mode {
+  border-bottom: 3px solid #fff;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.cv-button:hover {
+  background-position: 100% 99%;
+  color: #fff;
+}
+
+.cv-button-img {
+  display: none;
+}
+
+.container {
+  display: block;
+}
+
+.main-content-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content-divider:before {
+  content: '';
+  width: 50vw;
+  display: inline-block;
+  height: 1.5px;
+  background-color: black;
+  margin-right: 10px;
+}
+
+.main-content-divider:after {
+  content: '';
+  width: 50vw;
+  display: inline-block;
+  height: 1.5px;
+  background-color: black;
+  margin-left: 10px;
+}
+
+.github-icon,
+.linkedin-icon {
+  margin: 0 5px;
+  filter: drop-shadow(4px 4px lightgray);
+  fill: rgba(0, 0, 0, 0.78);
+  transition: all 0.3s ease;
+}
+
+.github-button,
+.linkedin-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+.github-icon:hover,
+.linkedin-icon:hover {
+  filter: drop-shadow(4px 4px darkgray);
+  cursor: pointer;
+}
+
+.home-content-container {
+  display: grid;
+  margin-bottom: 50px;
+}
+
+.divider-dark-mode:before,
+.divider-dark-mode:after {
+  background-color: white !important;
+  color: white !important;
+}
+
+.icon-dark-mode {
+  color: white !important;
+}
+
+/*
+            Media Queries
+        */
+@media screen and (max-width: 1000px) {
+  .main-content-name {
+    font-size: 36px
+  }
+
+  .main-content-container {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+  }
+
+  .cv-button {
+    display: none;
+  }
+
+  .cv-button-img {
+    width: 94vw;
+    padding: 7px 20px;
+    border-radius: 30px;
+    border-bottom: 3px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin: 15px 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    background: linear-gradient(white, white 50%, black 50%, black);
+    background-size: 100% 200%;
+    transition: background 0.5s;
+    cursor: pointer;
+    display: block;
+    text-align: center
+  }
+
+  .cv-button-img:hover {
+    background-position: 100% 99%;
+    color: #fff;
+  }
+
+  .image-content {
+    width: 200px;
+    height: 200px;
+    border-bottom-width: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image-content {
+    width: 150px;
+    height: 150px;
+    border-bottom-width: 4px;
+  }
+}
