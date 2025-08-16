@@ -3,7 +3,7 @@ name: Build and Deploy Angular to gh-pages
 on:
   push:
     branches:
-      - main   # when you push to main, deployment happens
+      - main
 
 jobs:
   build-deploy:
@@ -16,21 +16,24 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '16'   # Angular 14 works well with Node 16 or 18
+          node-version: '16'
 
       - name: Install dependencies
+        working-directory: ./ClientApp
         run: npm ci
 
       - name: Build Angular app
+        working-directory: ./ClientApp
         run: npm run build -- --configuration production --base-href=/
 
       - name: Copy 404.html for SPA fallback
-        run: cp dist/index.html dist/404.html
+        run: |
+          cp ClientApp/dist/index.html ClientApp/dist/404.html || echo "no index.html at root"
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./dist
-          force_orphan: true   # ensures branch is a clean snapshot
+          publish_dir: ./ClientApp/dist
+          force_orphan: true
