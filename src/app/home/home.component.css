@@ -214,6 +214,21 @@
     color: #fff;
   }
 
+.cv-button-img:active {
+  animation: buttonTap 0.5s forwards;
+}
+
+@keyframes buttonTap {
+  0% {
+    background-position: 0 0;
+    color: black;
+  }
+  100% {
+    background-position: 100% 99%;
+    color: #fff;
+  }
+}
+
   .image-content {
     width: 200px;
     height: 200px;

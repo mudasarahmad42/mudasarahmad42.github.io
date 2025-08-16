@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Mudasar_Ahmad</title>
-    <base href="/" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <app-root>
-      <div class="pre-loader">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100" width="200" height="200" xml:space="preserve"><circle cx="6" cy="50" r="6"><animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin=".1" /></circle><circle cx="26" cy="50" r="6"><animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin=".2" /></circle><circle cx="46" cy="50" r="6"><animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin=".3" /></circle></svg>
-      </div>
-    </app-root>
-  </body>
+<head>
+  <!-- Essential Meta Tags -->
+  <meta charset="utf-8" />
+  <title>Mudasar Ahmad</title>
+  <meta name="description"
+        content="Software Engineer specializing in Angular & .NET — building performant, accessible web applications." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mudasarahmad42.github.io/" />
+
+  <!-- Mobile-Friendly Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mudasar Ahmad" />
+  <meta property="og:description"
+        content="Angular & .NET | building fast, accessible apps" />
+  <meta property="og:url" content="https://mudasarahmad42.github.io/" />
+  <meta property="og:image"
+        content="https://mudasarahmad42.github.io/assets/images/MUDASAR_Fav.png" />
+
+  <!-- Performance Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+  <!-- Security & Compatibility -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/images/MUDASAR_Fav.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mudasar Ahmad",
+      "jobTitle": "Software Engineer",
+      "url": "https://mudasarahmad42.github.io/",
+      "image": "https://mudasarahmad42.github.io/assets/images/MUDASAR_Fav.png",
+      "sameAs": [
+        "https://github.com/mudasarahmad42",
+        "https://www.linkedin.com/in/mudasarahmad150"
+      ],
+      "knowsAbout": ["Angular", ".NET", "TypeScript", "REST APIs"]
+    }
+  </script>
+</head>
+
+<body>
+  <app-root>
+    <div class="pre-loader">
+      <!-- existing SVG loader -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100" width="200" height="200" xml:space="preserve">
+        <circle cx="6" cy="50" r="6">
+          <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin=".1" />
+        </circle>
+        <circle cx="26" cy="50" r="6">
+          <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin=".2" />
+        </circle>
+        <circle cx="46" cy="50" r="6">
+          <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin=".3" />
+        </circle>
+      </svg>
+    </div>
+  </app-root>
+
+  <!-- Defer Angular Scripts for Performance -->
+  <script src="runtime.js" defer></script>
+  <script src="polyfills.js" defer></script>
+  <script src="styles.js" defer></script>
+  <script src="vendor.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+
 </html>

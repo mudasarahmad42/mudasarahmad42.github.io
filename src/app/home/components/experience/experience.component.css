@@ -111,9 +111,10 @@
   cursor: pointer;
 }
 
-.groupid:hover {
+.groupid {
   color: #2c5282;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .job-description-list {

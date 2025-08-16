@@ -20,4 +20,8 @@ export class ExperienceComponent {
     window.open(videoUrl, '_blank');
   }
 
+  OpenNetwrixHelp(){
+    const helpUrl = 'https://helpcenter.netwrix.com/';
+    window.open(helpUrl, '_blank');
+  }
 }
