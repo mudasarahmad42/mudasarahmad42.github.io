@@ -8,10 +8,20 @@ import { ThemeService } from '../core/services/theme-service/theme.service';
 })
 export class HomeComponent {
   isDarkMode = false;
+  isModalOpen = false;
+  
   constructor(public themeService: ThemeService) {
     // Get the initial theme state
     this.themeService.isDarkMode$.subscribe(state => {
       this.isDarkMode = state;
     });
+  }
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
   }
 }
