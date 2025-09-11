@@ -22,7 +22,7 @@
   </div>
 
 
-  <a class="cv-button-img">
+  <a class="cv-button-img" (click)="openModal()">
     curriculum vitae
   </a>
 </div>
@@ -50,10 +50,10 @@
 
 <!-- CV Download Modal -->
 <div *ngIf="isModalOpen" class="modal-overlay" (click)="closeModal()">
-  <div class="modal-container" (click)="$event.stopPropagation()">
+  <div class="modal-container" (click)="$event.stopPropagation()" [ngClass]="{'cv-modal-dark-mode': isDarkMode}">
     <div class="modal-content">
-      <h2 class="modal-title">Download Curriculum Vitae</h2>
-      <p class="modal-description">Choose your preferred file format to download.</p>
+      <h2 class="modal-title" [ngClass]="{'modal-title-dark-mode': isDarkMode}">Download Curriculum Vitae</h2>
+      <p class="modal-description" [ngClass]="{'modal-description-dark-mode': isDarkMode}">Choose your preferred file format to download.</p>
 
       <div class="download-options">
         <a class="download-option" href="../../assets/files/MudasarAhmad_dotNET_CV.docx" (click)="closeModal()"

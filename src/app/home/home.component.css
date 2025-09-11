@@ -169,6 +169,20 @@
   color: white !important;
 }
 
+
+.cv-modal-dark-mode
+{
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+.modal-title-dark-mode{
+  color: white !important;
+}
+.modal-description-dark-mode{
+  color: white !important;
+}
+
 /*
             Media Queries
         */
@@ -252,6 +266,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: 40;
   display: flex;
   align-items: center;
