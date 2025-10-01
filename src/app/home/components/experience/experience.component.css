@@ -40,8 +40,21 @@
 /* Main container for the entire section */
 .experience-section {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   border-radius: 12px;
+}
+
+.experience-section:first-child {
+  padding: 2rem;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.7s ease;
 }
 
 /* Section title styling */
@@ -52,15 +65,6 @@
   color: #1a1a1a;
   border-bottom: 2px solid #e2e8f0;
   padding-bottom: 1rem;
-}
-
-.experience-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-  border-bottom: 1px solid #e2e8f0;
-  transition: all 0.7s ease;
 }
 
 .experience-item:hover {
@@ -112,9 +116,32 @@
 }
 
 .groupid {
-  color: #2c5282;
+  color: #5a9adc;
   cursor: pointer;
   font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.groupid:hover {
+  color: #33618f;
+  transform: translateY(-2px);
+}
+
+
+.groupid-synchronize {
+  color: #5a9adc;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.groupid-synchronize:hover {
+  color: #33618f;
+  transform: translateY(-2px);
 }
 
 .job-description-list {

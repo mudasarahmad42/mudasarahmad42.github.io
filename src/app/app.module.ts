@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 import { ExperienceComponent } from './home/components/experience/experience.component';
+import { CurrentlyLearningComponent } from './home/components/currently-learning/currently-learning.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ExperienceComponent } from './home/components/experience/experience.com
     AboutComponent,
     TechnologiesComponent,
     ProjectsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    CurrentlyLearningComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

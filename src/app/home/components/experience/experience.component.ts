@@ -14,14 +14,4 @@ export class ExperienceComponent {
       this.isDarkMode = state;
     });
   }
-
-  OpenGroupIDVideo() {
-    const videoUrl = 'https://www.imanami.com/wp-content/uploads/2023/11/Netwrix-GroupID.mp4';
-    window.open(videoUrl, '_blank');
-  }
-
-  OpenNetwrixHelp(){
-    const helpUrl = 'https://helpcenter.netwrix.com/';
-    window.open(helpUrl, '_blank');
-  }
 }
