@@ -3,9 +3,13 @@
 **Software Engineer** specializing in **.NET, Angular, and enterprise software systems**, with ~4 years of experience delivering solutions for high-profile clients across industries, including Fortune 50 companies.
 
 🏠 **Address:** [Lahore, Pakistan](https://maps.app.goo.gl/U4Gf4tBHqmaba1jWA)  
-📞 **Phone:** +92 301-3404987  
-📧 **Email:** [mudasarahmad150@gmail.com](mailto:mudasarahmad150@gmail.com)  
-🔗 **GitHub:** [mudasarahmad42](https://github.com/mudasarahmad42) · **Website:** [mudasarahmad42.github.io](https://mudasarahmad42.github.io/) · **LinkedIn:** [mudasarahmad150](https://www.linkedin.com/in/mudasarahmad150/)
+📞 **Phone<sub>(Primary)</sub>:** +92 310-3404111  
+📞 **Phone<sub>(Secondary)</sub>:** +92 301-3404987  
+📧 **Email:** [mudasarahmad150@gmail.com](mailto:mudasarahmad150@gmail.com)   
+🔗 **GitHub:** [mudasarahmad42](https://github.com/mudasarahmad42) 
+🔗 **Website:** [mudasarahmad42.github.io](https://mudasarahmad42.github.io/) 
+🔗 **LinkedIn:** [mudasarahmad150](https://www.linkedin.com/in/mudasarahmad150/) 
+
 
 ---
 
