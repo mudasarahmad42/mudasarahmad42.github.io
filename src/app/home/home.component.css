@@ -70,7 +70,6 @@
 }
 
 .cv-button {
-  width: 400px;
   padding: 7px 20px;
   border-radius: 30px;
   border-bottom: 3px solid black;
@@ -84,7 +83,13 @@
   background: linear-gradient(white, white 50%, black 50%, black);
   background-size: 100% 200%;
   transition: background 0.5s;
-  cursor: pointer
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 190px;
+  animation: blink 1s forwards;
 }
 
 .cv-button-dark-mode {
@@ -170,16 +175,16 @@
 }
 
 
-.cv-modal-dark-mode
-{
+.cv-modal-dark-mode {
   background-color: #121212 !important;
   color: white !important;
 }
 
-.modal-title-dark-mode{
+.modal-title-dark-mode {
   color: white !important;
 }
-.modal-description-dark-mode{
+
+.modal-description-dark-mode {
   color: white !important;
 }
 
@@ -228,20 +233,21 @@
     color: #fff;
   }
 
-.cv-button-img:active {
-  animation: buttonTap 0.5s forwards;
-}
+  .cv-button-img:active {
+    animation: buttonTap 0.5s forwards;
+  }
 
-@keyframes buttonTap {
-  0% {
-    background-position: 0 0;
-    color: black;
+  @keyframes buttonTap {
+    0% {
+      background-position: 0 0;
+      color: black;
+    }
+
+    100% {
+      background-position: 100% 99%;
+      color: #fff;
+    }
   }
-  100% {
-    background-position: 100% 99%;
-    color: #fff;
-  }
-}
 
   .image-content {
     width: 200px;
@@ -368,6 +374,33 @@
   font-size: 1.5rem;
 }
 
+
+/* Blinking golden star style */
+.blinking-star {
+  color: gold;
+  font-size: 20px;
+  position: relative;
+  top: -20px;
+  right: -65px;
+  animation: blink 1s infinite;
+  text-shadow: 0 0 8px gold, 0 0 15px orange;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: scale(1.2);
+  }
+}
+
+
 /* Material Symbols Font */
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
@@ -392,11 +425,11 @@
   .download-options {
     grid-template-columns: 1fr;
   }
-  
+
   .modal-content {
     padding: 1.5rem;
   }
-  
+
   .modal-title {
     font-size: 1.25rem;
   }

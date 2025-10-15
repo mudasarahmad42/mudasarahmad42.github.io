@@ -1,279 +1,264 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mudasar Ahmmad - Full Stack Developer | .NET/Angular</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mudasar Ahmad – Full Stack Software Developer</title>
   <style>
-    :root{
-      --bg: #f4f6f8;
-      --card: #ffffff;
-      --text: #2d2d2d;
-      --muted:#5f6368;
-      --accent:#2079c7;
-      --rule:#e9ecef;
-    }
-    /* ---- Layout ---- */
-    html, body { height: 100%; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      background: var(--bg);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.5;
-    }
-    .container{
-      max-width: 1000px;
-      margin: 48px auto;
-      padding: 40px 48px;
-      background: var(--card);
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.06);
-    }
-    .header{
-      display:grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 32px;
-      align-items: start;
-    }
-    h1{
-      font-size: clamp(32px, 5vw, 44px);
-      line-height: 1.1;
-      margin: 0 0 8px;
-    }
-    .summary{
-      color: var(--muted);
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f4f3f1;
       margin: 0;
-    }
-
-    .contact{
-      list-style: none;
       padding: 0;
-      margin: 0;
-      font-size: 0.98rem;
+      color: #222;
     }
-    .contact li + li{ margin-top: 6px; }
-    .contact a{ color: var(--accent); text-decoration: none; }
-    .contact a:hover{ text-decoration: underline; }
 
-    /* Sections */
-    .rule{ height:1px; background: var(--rule); margin: 28px 0; border: 0; }
-    .section-title{
-      font-size: .85rem;
-      letter-spacing: .12em;
-      color: var(--accent);
+    .resume-container {
+      max-width: 800px;
+      background: white;
+      margin: 40px auto;
+      padding: 60px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 28px;
       font-weight: 700;
-      margin: 32px 0 12px;
+      margin-bottom: 4px;
     }
 
-    .grid-2{
-      display:grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 32px;
-      align-items: start;
-    }
-
-    h2.role{
-      font-size: 1.05rem;
-      margin: 0;
+    h2 {
+      font-size: 18px;
       font-weight: 700;
+      border-bottom: 2px solid #000;
+      margin-top: 32px;
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      text-transform: uppercase;
     }
-    .meta{
-      color: var(--muted);
-      font-size:.9rem;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .contact a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 4px 0 12px 18px;
+      padding: 0;
+    }
+
+    li {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .role {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .period {
+      font-size: 12px;
+      color: #555;
+      font-style: italic;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+    }
+
+    div.period > span{
+      padding: 2px;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    /* header */
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0;
+      color: #000;
+    }
+
+    .role {
+      font-size: 15px;
+      color: #333;
       margin: 4px 0 10px;
     }
 
-    ul.bullets{
-      padding-left: 18px;
-      margin: 0 0 14px;
-    }
-    ul.bullets li{ margin: 6px 0; }
-
-    /* Skills alignment */
-    .skills-group{ margin-bottom: 18px; }
-    .skills-label{ font-weight: 700; }
-    .skills-list{
-      margin: 4px 0 0;
-      padding-left: 18px;
+    .contact {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
     }
 
-    /* Education */
-    .edu-item{ margin-bottom: 14px; }
-
-    /* SubScript */
-    .subscript{
-      color: rgb(165, 165, 165);
+    .contact a {
+      color: #555;
+      text-decoration: none;
     }
 
-    /* Responsive */
-    @media (max-width: 900px){
-      .header, .grid-2{ grid-template-columns: 1fr; }
-      .container{ padding: 32px 22px; }
-    }
-
-    /* Print-friendly */
-    @media print{
-      body{ background: #fff; }
-      .container{
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-        border-radius: 0;
-      }
-      a{ color: inherit; text-decoration: none; }
-      .rule{ margin: 18px 0; }
+    .contact a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
-  <main class="container">
-    <!-- Header -->
-    <section class="header">
-      <div>
-        <h1>Mudasar Ahmad</h1>
-        <p class="summary">
-          Software Engineer specializing in <strong>.NET, Angular, and enterprise software systems</strong>, with around 4 years of experience delivering solutions for high‑profile clients across industries, including Fortune 50 companies. I excel at building efficient, scalable, and user-friendly applications. I combine strong technical skills with the ability to work directly with customers to understand needs, solve problems, and deliver results that matter.
-        </p>
+  <div class="resume-container">
+    <header class="header">
+      <h1 class="name">Mudasar Ahmad</h1>
+      <p class="role">Full Stack Software Developer | .NET / Angular</p>
+      <p class="contact">
+        <a href="mailto:mudasarahmad150@gmail.com">📧 mudasarahmad150@gmail.com</a> ·
+        📞 +92 310-3404111 ·
+        📞 +92 301-3404987 ·
+        🏠 Lahore, Pakistan ·
+        <a style="display: block;" href="https://www.linkedin.com/in/mudasarahmad150" target="_blank">🔗
+          linkedin.com/in/mudasarahmad150</a>
+      </p>
+    </header>
+
+
+    <h2>Professional Summary</h2>
+    <p>I am a Software Engineer specializing in .NET, Angular, and enterprise systems, with 4 years of experience
+      delivering solutions for high-profile clients, including Fortune 50 companies. I work effectively in teams and
+      independently.</p>
+
+    <h2>Experience</h2>
+
+    <div class="section">
+      <div class="role">
+        <h3>Software Engineer - Netwrix</h3>
+        <div class="period">
+          <span>11/2022 – Present</span>
+          <span class="job-type">Remote</span>
+        </div>
       </div>
-      <ul class="contact">
-        <li>🏠 <strong>Address:</strong> <a target="_blank" href="https://maps.app.goo.gl/U4Gf4tBHqmaba1jWA">Lahore, Pakistan</a></li>
-        <li>📞 <strong>Phone <sub class="subscript">(Primary):</sub></strong> +92 310-3404111</li>
-        <li>📞 <strong>Phone <sub class="subscript">(Secondary):</sub></strong> +92 301-3404987</li>
-        <li>📧 <strong>Email:</strong> <a target="_blank" href="mailto:mudasarahmad150@gmail.com">mudasarahmad150@gmail.com</a></li>
-        <li>🔗 <strong>GitHub:</strong> <a target="_blank" href="https://github.com/mudasarahmad42">mudasarahmad42</a></li>
-        <li>🔗 <strong>Personal Website:</strong> <a target="_blank" href="https://mudasarahmad42.github.io/">mudasarahmad42.github.io</a></li>
-        <li>🔗 <strong>LinkedIn:</strong> <a target="_blank" href="https://www.linkedin.com/in/mudasarahmad150/">mudasarahmad150</a></li>
+      <ul>
+        <li>Resolved over 800 bugs across multiple modules, significantly enhancing product stability and quality.</li>
+        <li>Revamped the reports module with a modern UI and took ownership of ongoing maintenance.</li>
+        <li>Optimized directory synchronization by implementing new workflow capabilities.</li>
+        <li>Collaborated with UI/UX designers, product managers, QA, technical writers, and support teams.</li>
+        <li>Delivered urgent, high-impact features for Fortune 50 clients under strict deadlines.</li>
+        <li>Worked directly with enterprise customers to troubleshoot and resolve escalations.</li>
+        <li>Improved performance and memory usage of key components (reduced peak memory from ~90% to ~35%).</li>
       </ul>
-    </section>
+    </div>
 
-    <hr class="rule" />
-
-    <section class="grid-2">
-      <!-- Left column -->
-      <div>
-        <h3 class="section-title">EXPERIENCE</h3>
-
-        <article>
-          <h2 class="role">Netwrix — <em>Software Engineer</em> (Remote)</h2>
-          <p class="meta">November 2022 – Present</p>
-          <ul class="bullets">
-            <li>Contributed to the development and maintenance of <strong>Netwrix Directory Manager</strong> (formerly GroupID), a directory automation tool used by global enterprises.</li>
-            <li>Resolved <strong>800+ bugs</strong> across multiple modules, significantly enhancing product stability and quality.</li>
-            <li>Revamped the <strong>Reports</strong> module with a modern UI, fixed critical issues, and took ownership of ongoing maintenance.</li>
-            <li>Optimized directory synchronization by implementing new <strong>workflow</strong> capabilities.</li>
-            <li>Collaborated with UI/UX designers, product managers, QA engineers, technical writers, and support teams to align technical solutions with business goals.</li>
-            <li>Delivered urgent, high-impact features for <strong>Fortune 50</strong> clients under strict deadlines, including custom solutions.</li>
-            <li>Worked directly with enterprise customers to troubleshoot issues, resolve escalations, and provide expert maintenance support.</li>
-            <li>Improved performance and memory usage of key components, reducing peak memory consumption from ~90% to ~35%.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h2 class="role">Imanami Corporation — <em>Software Engineer</em> (Hybrid, Lahore, Pakistan)</h2>
-          <p class="meta">February 2022 – November 2022</p>
-          <ul class="bullets">
-            <li>Actively contributed to the <strong>GroupID v11</strong> release, introducing significant enhancements to functionality and UI.</li>
-            <li>Developed and maintained key features of GroupID’s <strong>Synchronize</strong> module.</li>
-            <li>Collaborated closely with QA to identify and resolve bugs, ensuring high-quality code and reliable system performance.</li>
-            <li>Worked with UI/UX engineers to implement intuitive designs aligned with company standards.</li>
-          </ul>
-        </article>
-
-        <h3 class="section-title">PROJECTS</h3>
-
-        <article>
-          <h2 class="role">Dubai Wheels — <em>Web Application</em></h2>
-          <ul class="bullets">
-            <li>Refactored and optimized the codebase to improve maintainability and resolve code smells.</li>
-            <li>Implemented secure authentication &amp; authorization using <strong>Microsoft Identity</strong>.</li>
-            <li>Addressed security vulnerabilities and fixed critical bugs to enhance application stability.</li>
-            <li>Partnered with the product owner to deliver timely improvements and ensure a high-quality UX.</li>
-            <li><strong>Tech:</strong> .NET 8, Entity Framework, MS SQL Server, Angular 18</li>
-            <li><strong>Live:</strong> <a target="_blank" href="http://dubaiwheels.ae">dubaiwheels.ae</a></li>
-          </ul>
-        </article>
-
-        <article>
-          <h2 class="role">Sports Management System — <em>Web Application</em></h2>
-          <ul class="bullets">
-            <li>Built a web app for sports departments to manage <strong>tournaments</strong>, <strong>teams</strong>, <strong>blogs</strong>, <strong>equipment</strong>, and <strong>users</strong>.</li>
-            <li>Implemented tournament features: team registration, fixtures, automated points table, and role‑based access (admin, head of sports, captain).</li>
-            <li>Built a blogging system with content moderation, embedded media, and comments.</li>
-            <li>Integrated leave and equipment modules for inventory tracking and request workflows.</li>
-            <li><strong>Tech:</strong> ASP.NET Core 3.1, Entity Framework Core, SQL Server, JavaScript, jQuery, Bootstrap 4, Visual Studio 2019</li>
-          </ul>
-        </article>
+    <div class="section">
+      <div class="role">
+        <h3>Software Engineer - Imanami Corporation</h3>
+        <div class="period">
+          <span>02/2022 – 11/2022</span>
+          <span class="job-type">Lahore, Pakistan</span>
+        </div>
       </div>
+      <ul>
+        <li>Contributed to the release of GroupID version 11 with major functionality and UI improvements.</li>
+        <li>Developed and maintained features of the Synchronize module.</li>
+        <li>Collaborated with QA teams to resolve bugs and maintain code quality.</li>
+        <li>Worked with UI/UX engineers to implement company-standard designs.</li>
+      </ul>
+    </div>
 
-      <!-- Right column -->
-      <aside>
-        <h3 class="section-title">SKILLS</h3>
-
-        <div class="skills-group">
-          <div class="skills-label">Programming Languages</div>
-          <ul class="skills-list">
-            <li>C#, TypeScript (TS), JavaScript (JS)</li>
-          </ul>
+    <div class="section">
+      <div class="role">
+        <h3>Trainee Backend Developer - Programmers Force</h3>
+        <div class="period">
+          <span>10/2021 – 12/2021</span>
+          <span class="job-type">Lahore, Pakistan</span>
         </div>
+      </div>
+      <ul>
+        <li>Developed RESTful APIs using Laravel, MySQL, and MongoDB.</li>
+        <li>Collaborated with frontend developers to deliver a functional MVP within deadlines.</li>
+      </ul>
+    </div>
 
-        <div class="skills-group">
-          <div class="skills-label">Frameworks &amp; Platforms</div>
-          <ul class="skills-list">
-            <li>HTML, CSS, Bootstrap, jQuery, .NET (Core &amp; Framework), Angular, React, IdentityServer, Microsoft Identity Framework, Entity Framework (ORM), MediatR, SignalR</li>
-          </ul>
-        </div>
+    <h2>Education</h2>
+    <div class="section">
+      <h3>B.S. in Computer Science</h3>
+      <div class="period">2017 – 2021 | Government College University (GCU), Lahore</div>
+      <p>CGPA: 3.10 / 4.00</p>
+      <p>Relevant Coursework: DSA, OOP, Software Engineering, OS, Database Systems, AI, Compiler Construction, Computer
+        Architecture, Info Security.</p>
 
-        <div class="skills-group">
-          <div class="skills-label">Infrastructure &amp; Databases</div>
-          <ul class="skills-list">
-            <li>Azure AD, Active Directory, SQL Server, Elasticsearch</li>
-          </ul>
-        </div>
+      <h3>Intermediate (Pre-Engineering)</h3>
+      <div class="period">2015 – 2017 | Forman Christian College, Lahore</div>
+      <p>Grade: 80%</p>
 
-        <div class="skills-group">
-          <div class="skills-label">Tools &amp; IDEs</div>
-          <ul class="skills-list">
-            <li>Visual Studio, VS Code, SQL Server Management Studio (SSMS), dotMemory, Postman, Git (version control), Azure DevOps (work item tracking)</li>
-          </ul>
-        </div>
+      <h3>Matric</h3>
+      <div class="period">2003 – 2015 | Divisional Public School, Model Town, Lahore</div>
+      <p>Grade: 92%</p>
+    </div>
 
-        <div class="skills-group">
-          <div class="skills-label">AI‑Assisted Development</div>
-          <ul class="skills-list">
-            <li>Claude Code, Windsurf, ChatGPT Enterprise</li>
-          </ul>
-        </div>
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming Languages:</strong> C#, TypeScript, JavaScript</li>
+      <li><strong>Frameworks & Platforms:</strong> HTML, CSS, Bootstrap, jQuery, .NET (Core/Framework), Angular, React,
+        Identity Server, Entity Framework, MediatR, SignalR</li>
+      <li><strong>Infrastructure & Databases:</strong> Azure AD, Active Directory, SQL Server, Elasticsearch</li>
+      <li><strong>Tools & IDEs:</strong> Visual Studio, VS Code, SSMS, dotMemory, Postman, Git, Azure DevOps</li>
+      <li><strong>AI-assisted Development:</strong> Claude Code, Windsurf, ChatGPT Enterprise</li>
+      <li><strong>Other:</strong> RESTful APIs, MVC, CQRS, LINQ, xUnit, OAuth, OIDC, OWASP Guidelines</li>
+    </ul>
 
-        <div class="skills-group">
-          <div class="skills-label">Other</div>
-          <ul class="skills-list">
-            <li>RESTful APIs, ASP.NET MVC, MVVM, .NET Core, IIS, .NET Framework 4.5+, CQRS, LINQ, T‑SQL, Microservices, Stored Procedures, Indexing, DDL/DML, CTEs, Caching, Design Patterns, XML, JSON, Unit Testing, OAuth, OIDC, JWT, Cookies, Code Reviews, SDLC, Agile, Relational Databases, Zero Trust principles, Secure System Design, Attention to detail, Debugging, OWASP, Full‑stack Web Development, Web Services</li>
-          </ul>
-        </div>
+    <h2>Projects</h2>
+    <div class="section">
+      <h3>Dubai Wheels - Web Application</h3>
+      <ul>
+        <li>Refactored and optimized codebase to improve maintainability and resolve code smells.</li>
+        <li>Implemented secure authentication and authorization using Microsoft Identity Framework.</li>
+        <li>Addressed security vulnerabilities and enhanced application stability.</li>
+        <li>Collaborated with product owner to deliver improvements and ensure user satisfaction.</li>
+        <li>Tech: .NET 8, EF, MS SQL Server, Angular 18</li>
+        <li>Live: <a href="https://dubaiwheels.ae" target="_blank">dubaiwheels.ae</a></li>
+      </ul>
 
-        <h3 class="section-title">EDUCATION</h3>
-
-        <div class="edu-item">
-          <strong>B.S. in Computer Science</strong> — Government College University, Lahore<br/>
-          2017 – 2021 • CGPA: 3.10 / 4.00
-          <div class="meta" style="margin-top:6px;">
-            <strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms (DSA), Object‑Oriented Programming (OOP), Software Engineering, Operating Systems (OS), Database Systems, Artificial Intelligence (AI), Compiler Construction, Computer Architecture, Information Security.
-          </div>
-        </div>
-
-        <div class="edu-item">
-          <strong>Intermediate (Pre‑Engineering)</strong> — Forman Christian College, Lahore<br/>
-          2015 – 2017 • Grade: 80%
-        </div>
-
-        <div class="edu-item">
-          <strong>Matric</strong> — Divisional Public School, Lahore<br/>
-          2003 – 2015 • Grade: 92%
-        </div>
-      </aside>
-    </section>
-  </main>
+      <h3>Sports Management System - Web Application</h3>
+      <ul>
+        <li>Developed a system for managing tournaments, blogs, and equipment for institutes.</li>
+        <li>Tech: ASP.NET Core 3.1, EF Core, SQL Server, JS, jQuery, Bootstrap, VS 2019</li>
+      </ul>
+    </div>
+  </div>
 </body>
+
 </html>
