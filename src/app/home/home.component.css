@@ -332,6 +332,10 @@
   background-color: #e5e7eb;
 }
 
+.download-option.pdf{
+    animation: blink 1s forwards;
+}
+
 .download-icon {
   font-size: 3rem;
   color: #6b7280;
