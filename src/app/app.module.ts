@@ -43,6 +43,7 @@ import { ReactiveFormsComponent } from './skills/angular/reactive-forms/reactive
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'welcome', component: RiddleComponent },
       { path: 'skills', component: SkillsComponent },
+      { path: 'skills/:any', redirectTo: '/skills', pathMatch: 'full' },
       { path: 'skills/angular/reactive-forms', component: ReactiveFormsComponent },
     ]),
     NgbModule

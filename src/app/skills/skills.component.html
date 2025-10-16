@@ -20,26 +20,34 @@
 
     <!-- Modal HTML -->
     <div class="modal-overlay" *ngIf="selectedSkill" (click)="closeModal()">
-      <div class="modal-content">
-        <!-- <button class="close-btn">
+        <div class="modal-content">
+            <!-- <button class="close-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
         </button> -->
-        
-        <div class="modal-header">
-            <div class="modal-skill-icon">
-                <!-- Angular Icon SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M227.08,64.62l-96-40a7.93,7.93,0,0,0-6.16,0l-96,40a8,8,0,0,0-4.85,8.44l16,120a8,8,0,0,0,4.35,6.1l80,40a8,8,0,0,0,7.16,0l80-40a8,8,0,0,0,4.35-6.1l16-120A8,8,0,0,0,227.08,64.62ZM200.63,186.74,128,223.06,55.37,186.74,40.74,77,128,40.67,215.26,77ZM121,84.12l-40,72a8,8,0,1,0,14,7.76L106,144H150l11,19.88a8,8,0,1,0,14-7.76l-40-72a8,8,0,0,0-14,0ZM141.07,128H114.93L128,104.47Z"></path></svg>
+
+            <div class="modal-header">
+                <div class="modal-skill-icon">
+                    <!-- Angular Icon SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M227.08,64.62l-96-40a7.93,7.93,0,0,0-6.16,0l-96,40a8,8,0,0,0-4.85,8.44l16,120a8,8,0,0,0,4.35,6.1l80,40a8,8,0,0,0,7.16,0l80-40a8,8,0,0,0,4.35-6.1l16-120A8,8,0,0,0,227.08,64.62ZM200.63,186.74,128,223.06,55.37,186.74,40.74,77,128,40.67,215.26,77ZM121,84.12l-40,72a8,8,0,1,0,14,7.76L106,144H150l11,19.88a8,8,0,1,0,14-7.76l-40-72a8,8,0,0,0-14,0ZM141.07,128H114.93L128,104.47Z">
+                        </path>
+                    </svg>
+                </div>
+                <h2>Angular</h2>
             </div>
-            <h2>Angular</h2>
-        </div>
-        <p class="modal-description">Angular is a platform for building dynamic and interactive single-page applications (SPAs) efficiently. I use it to create rich, interactive user interfaces with a focus on performance and scalability.</p>
-        
-        <div class="interactive-example">
+            <p class="modal-description">Angular is a platform for building dynamic and interactive single-page
+                applications (SPAs) efficiently. I use it to create rich, interactive user interfaces with a focus on
+                performance and scalability.</p>
+
             <h3>Interactive Examples</h3>
-            <div class="example-placeholder" (click)="navigateToReactiveForms()">
-                <span>Reactive Forms</span>
+            <div class="interactive-example"> 
+                <!-- style="overflow-y: scroll; max-height: 400px;" -->
+                <div class="example-placeholder" (click)="navigateToReactiveForms()">
+                    <span>Reactive Forms</span>
+                </div>           
             </div>
         </div>
-      </div>
     </div>
 </div>
