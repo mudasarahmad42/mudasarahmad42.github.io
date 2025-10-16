@@ -1,0 +1,60 @@
+<p class="under-progress">🏗️ This is a basic reactive form, i will be adding more complexity as soon as i get time</p>
+
+<div class="main-container">
+    <form class="form-container" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-field">
+            <label for="firstName">First Name</label>
+            <input type="text" formControlName="firstName" placeholder="First Name"
+                [class.invalid]="isFormValueInValid('firstName')" name="firstName" id="firstName" />
+            <span class="error" *ngIf="isFormValueInValid('firstName')">
+                First Name is required
+            </span>
+        </div>
+
+        <div class="form-field">
+            <label for="lastName">Last Name</label>
+            <input type="text" formControlName="lastName" placeholder="Last Name"
+                [class.invalid]="isFormValueInValid('lastName')" name="lastName" id="lastName" />
+            <span class="error" *ngIf="isFormValueInValid('lastName')">
+                Last Name is required
+            </span>
+        </div>
+
+        <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" placeholder="Email"
+                [class.invalid]="isFormValueInValid('email')" name="email" id="email" />
+            <span class="error" *ngIf="isFormValueInValid('email')">
+                Enter a valid email
+            </span>
+        </div>
+
+        <div class="form-field">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" placeholder="Password"
+                [class.invalid]="isFormValueInValid('password')" name="password" id="password" />
+            <span class="error" *ngIf="isFormValueInValid('password')">
+                Password is required
+            </span>
+        </div>
+
+
+        <div class="form-field">
+            <label>Skills</label>
+            <div formArrayName="skills">
+                <div *ngFor="let skill of skills.controls; let i = index">
+                    <input type="text" [formControlName]="i" placeholder="Enter skill"
+                        [class.invalid]="isSkillInvalid(i)" />
+                    <button class="remove-skill" type="button" (click)="removeSkill(i)"
+                        *ngIf="skills.length > 1">Remove</button>
+                    <span class="error" *ngIf="isSkillInvalid(i)">Skill is required</span>
+                </div>
+            </div>
+            <button style="margin-top: 20px;" class="add-skill" type="button" (click)="addSkill()">Add Skill</button>
+        </div>
+
+        <button class="submit-btn" type="submit">Submit</button>
+    </form>
+
+    <pre class="form-data-container" *ngIf="data">{{data | json}}</pre>
+</div>

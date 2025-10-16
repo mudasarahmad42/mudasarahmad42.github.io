@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../core/services/theme-service/theme.service';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { IconsModule } from '../icons/icons.module';
 
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.css']
+  standalone: true,
+  styleUrls: ['./nav-menu.component.css'],
+  imports: [
+    CommonModule,
+    RouterModule,
+    IconsModule
+  ]
 })
 export class NavMenuComponent {
   isExpanded = false;
